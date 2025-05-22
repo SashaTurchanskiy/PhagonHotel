@@ -25,8 +25,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private CustomUserDetailsService customUserDetailsService;
-    private JWTAuthFilter jwtAuthFilter;
+    private final CustomUserDetailsService customUserDetailsService;
+    private final JWTAuthFilter jwtAuthFilter;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
